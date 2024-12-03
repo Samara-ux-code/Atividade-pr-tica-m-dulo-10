@@ -58,7 +58,7 @@ public class ProdutoController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Boolean> deleteProduto(@PathVariable Integer id) {
 		if(produtoService.deleteProduto(id))
-			return new ResponseEntity<>(true, HttpStatus.OK);
+			return new ResponseEntity<>(true, HttpStatus.NO_CONTENT);
 		else 
 			return new ResponseEntity<>(false, HttpStatus.OK);
 	}
